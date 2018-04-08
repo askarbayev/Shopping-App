@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Demo1</string>
+    <string name="item_1">add items</string>
+    <string name="item_2">buy items</string>
+    <string name="item_3">cart</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="blank_fragment1">fragment1</string>
+    <string name="blank_fragment2">fragment2</string>
+    <string name="blank_fragment3">fragment3</string>
+</resources>
