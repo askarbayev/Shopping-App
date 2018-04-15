@@ -45,5 +45,9 @@ public class Item {
     public String getType(){
         return type;
     }
+    public String toString(){
+        return getId()+" - "+getName()+" - "+getType()+" - "+getPrice();
+    }
+
 
 }

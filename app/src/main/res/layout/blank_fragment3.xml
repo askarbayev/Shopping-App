@@ -6,9 +6,10 @@
     tools:context=".BlankFragment3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/cartListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/blank_fragment3" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"/>
 
 </FrameLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Demo1</string>
+    <string name="app_name">Sopping App</string>
     <string name="item_1">add items</string>
     <string name="item_2">buy items</string>
     <string name="item_3">cart</string>

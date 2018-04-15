@@ -6,7 +6,10 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -15,13 +18,20 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
     DBHelper db;
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //getItems();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setCurrentItem(3);
+        getItems();
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
+        //bottomNavigationView.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
+        //bottomNavigationView.setSelectedItemId(R.id.action_item2);
 
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,18 +55,20 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+        //bottomNavigationView.setSelectedItemId(R.id.action_item2);
+        bottomNavigationView.setSelectedItemId(R.id.action_item2);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, BlankFragment.newInstance());
+        transaction.replace(R.id.frame_layout, BlankFragment2.newInstance());
         transaction.commit();
 
     }
 
     public void getItems(){
         db = new DBHelper(this);
-        LinkedList<Item> items = db.getAllItems();
+        ArrayList<Item> items = db.getAllItems();
         for (Item item:items){
-            Toast.makeText(this, item.getName(), Toast.LENGTH_SHORT).show();
+            Log.d("Item", ""+item.getId()+" - "+item.getName()+" - "+item.getType()+" - "+item.getPrice()+" - "+item.getQuantity());
         }
     }
 

@@ -11,10 +11,10 @@ public class ChosenItem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chosen_item);
-        Intent intent = getIntent();
-        Bundle bundle =intent.getExtras();
-        int itemID = bundle.getInt("itemID");
-        Toast.makeText(this, itemID+"", Toast.LENGTH_SHORT).show();
+        //Intent intent = getIntent();
+        //Bundle bundle =intent.getExtras();
+        //int itemID = bundle.getInt("itemID");
+        //Toast.makeText(this, itemID+"", Toast.LENGTH_SHORT).show();
 
     }
 }
