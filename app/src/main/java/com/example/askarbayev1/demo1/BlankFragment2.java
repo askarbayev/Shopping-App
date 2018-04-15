@@ -121,10 +121,10 @@ public class BlankFragment2 extends Fragment {
                         db.updateItem(item.getId(), item.getName(), item.getType(), item.getPrice(), item.getQuantity()-quantity);
 
                     }
-                    Toast.makeText(getActivity(), "your item(s) added to CART", Toast.LENGTH_SHORT).show();
-                    Log.d("CHECK BUDGET", checkBudget+"");
+                    //Toast.makeText(getActivity(), "your item(s) added to CART", Toast.LENGTH_SHORT).show();
                     db.updateBudget(db.getBudget()-checkBudget);
                     updateActivity();
+                    Toast.makeText(getActivity(), "your item(s) added to CART", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Toast.makeText(getActivity(), "You don't have enough budget", Toast.LENGTH_SHORT).show();
@@ -235,13 +235,6 @@ public class BlankFragment2 extends Fragment {
         return linkedList;
     }
 
-    public void nextActivity(int itemID){
-        Intent intent = new Intent(getActivity(), ChosenItem.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("itemID", itemID);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
 
 }
 

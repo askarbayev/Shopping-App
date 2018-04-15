@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="69dp"
         android:theme="@style/TextLabel"
         app:errorEnabled="true">
 
@@ -104,10 +104,10 @@
 
     <Button
         android:id="@+id/enter"
-        android:layout_width="match_parent"
+        android:layout_width="179dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/text_input_price"
+        android:layout_centerHorizontal="true"
         android:background="#000000"
         android:text="ENTER"
         android:textColor="#FFFFFF"

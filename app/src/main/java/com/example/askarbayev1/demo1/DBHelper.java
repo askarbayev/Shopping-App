@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String SHOPAPP_COLUMN_QUANTITY = "quantity";
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 4);
+        super(context, DATABASE_NAME, null, 5);
     }
 
 

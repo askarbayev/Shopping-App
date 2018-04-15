@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setCurrentItem(3);
-        getItems();
+        //getItems();
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
         //bottomNavigationView.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);

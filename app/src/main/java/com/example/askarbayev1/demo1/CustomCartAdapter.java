@@ -17,7 +17,7 @@ public class CustomCartAdapter extends BaseAdapter {
     private Context context;
     private ArrayList<Item> cartItemList;
     private LayoutInflater inflater;
-    TextView name_type, quantity;
+    TextView name_type, price;
     private boolean isListView;
 
     CustomCartAdapter(Context context, ArrayList<Item> arrayList, boolean isListView){
@@ -54,11 +54,11 @@ public class CustomCartAdapter extends BaseAdapter {
 
         }
         name_type = (TextView) view.findViewById(R.id.name_type);
-        quantity = (TextView) view.findViewById(R.id.quantity);
+        price = (TextView) view.findViewById(R.id.price);
         Log.d("i", i+"");
         name_type.setText(cartItemList.get(i).getName()+" - "+cartItemList.get(i).getType());
-        String qty = String.valueOf(cartItemList.get(i).getQuantity());
-        quantity.setText("Qty: "+qty);
+        String priceValue = String.valueOf(cartItemList.get(i).getPrice());
+        price.setText("$"+priceValue);
         String price_val = String.valueOf(cartItemList.get(i).getPrice());
         return view;
     }

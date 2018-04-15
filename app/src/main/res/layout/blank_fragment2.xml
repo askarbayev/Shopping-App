@@ -59,16 +59,6 @@
         android:hint="your budget"
         android:inputType="numberDecimal" />
 
-    <Button
-        android:id="@+id/enter_budget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/edit_budget"
-        android:background="@color/selectedBar"
-        android:text="enter"
-        android:textColor="@color/colorPrimary" />
-
     <TextView
         android:id="@+id/budget"
         android:layout_width="wrap_content"
@@ -79,6 +69,17 @@
         android:text="budget"
         android:textColor="@color/selectedBar"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/enter_budget"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/edit_budget"
+        android:background="@color/selectedBar"
+        android:text="send"
+        android:textColor="@color/colorPrimary" />
 
 
 </RelativeLayout>
